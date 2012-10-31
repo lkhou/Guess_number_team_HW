@@ -1,15 +1,18 @@
 import static java.lang.System.out;
 import java.util.Scanner;
 public class Main{
-	static int[] input;
+	static int[] input,qu;
 	static int tn1,tn2,tn3;
 	static Scanner inputN = new Scanner(System.in);
 	public static void UserInput()
 	{	
 		System.out.println("Enter the 1000<number<9999 : ");
 		String ui = inputN.nextLine();
+		if( ui.equals("0000"))
+		{for(int z=0;z<qu.length;z++){out.print(qu[z]);}out.println();tn1++;}
+		else{
 		for (int z=0;z<ui.length();z++) 
-		{	//     
+		{	     
 			if(Character.isDigit(ui.charAt(z))==false)
 			{	
 				tn1++;
@@ -26,7 +29,7 @@ public class Main{
 				else {out.println("ERROR");tn1++;}
 			 }
 			 else {out.println("ERROR");
-		}
+		}}
 	}
 	
 	public static void main(String ... args)
@@ -39,7 +42,7 @@ public class Main{
 			{
 			case "a":
 			{
-				int[] qu = Question.make();
+				qu = Question.make();
 				do
 				{	tn1=0;
 					UserInput();
