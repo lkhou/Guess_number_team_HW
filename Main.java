@@ -9,7 +9,7 @@ public class Main{
 		System.out.println("Enter the 1000<number<9999 : ");
 		String ui = inputN.nextLine();
 		for (int z=0;z<ui.length();z++) 
-		{	     
+		{	//     
 			if(Character.isDigit(ui.charAt(z))==false)
 			{	
 				tn1++;
